@@ -67,9 +67,9 @@ class router_base_test extends uvm_test;
 		super.end_of_elaboration_phase(phase);
 		uvm_top.print_topology();
 		for(int i=0; i<no_of_src; i++)
-			env.src_top.src_agt[i].seqr.set_arbitration(SEQ_ARB_RANDOM);
+			env.src_top.src_agt[i].seqr.set_arbitration(UVM_SEQ_ARB_RANDOM);
 		for(int i=0; i<no_of_dst; i++)
-			env.dst_top.dst_agt[i].seqr.set_arbitration(SEQ_ARB_RANDOM);
+			env.dst_top.dst_agt[i].seqr.set_arbitration(UVM_SEQ_ARB_RANDOM);
 	endfunction
 
 	/*task run_phase(uvm_phase phase);
